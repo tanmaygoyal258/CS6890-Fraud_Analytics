@@ -65,7 +65,7 @@ echo $CONDA_PREFIX
 J = np.zeros(K, dtype=np.int64)
 ```
 
-9. Now we are ready to run the code. Note that the node2vec implementation from command line is itself put inside the Jupytter Notebook. Incase you wish to run it on the command line terminal seperately, the code for it is as follows:
+9. Now we are ready to run the code. Note that the node2vec implementation is within the Jupter notebook itself. In case you wish to run it on the command line terminal seperately, the command for it is as follows:
 ```
 python main.py --input graph.txt --output embedding.emd --weighted
 ```
