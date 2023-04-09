@@ -63,7 +63,7 @@ echo $CONDA_PREFIX
     return sum(len(list(sentence)) for sentence in job)
     ```
 
-8. In the file `node2vec.py` in the main directory, under the function àlias_setup()`, change the initialization of J to the following:
+8. In the file `node2vec.py` in the main directory, under the function `alias_setup()`, change the initialization of J to the following:
 ```
 J = np.zeros(K, dtype=np.int64)
 ```
