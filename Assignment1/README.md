@@ -38,9 +38,16 @@ echo $CONDA_PREFIX
 
 7. Open the path in your file explorer or finder, and make the following changes:
 
-    a. Look for the file `networkx/algorithms/dag.py`. Comment the line `from fractions import gcd` and add the line `from math import gcd`. 
+    a. Look for the file `networkx/algorithms/dag.py`. Change the lines in import as:
+    ```
+    # from fractions import gcd
+    from math import gcd
+    ```
 
-    b. Look for the file `gensim/models/ldamodel.py`. Under the except block after the imports, change the line to `from scipy.special import logsumexp`
+    b. Look for the file `gensim/models/ldamodel.py`. Under the except block after the imports, change the following line:
+    ```
+    from scipy.special import logsumexp
+    ```
 
     c. Look for the file `gensim/corpora/dictionary.py`. Change the import line `from collections import Mapping, defaultdict` to the following:
     ```
