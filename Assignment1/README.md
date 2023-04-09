@@ -44,19 +44,22 @@ echo $CONDA_PREFIX
     from math import gcd
     ```
 
-    b. Look for the file `gensim/models/ldamodel.py`. Under the except block after the imports, change the following line:
+    b. Look for the file `gensim/models/ldamodel.py`. Under the except block after the imports, make the following change:
     ```
+    # from scipy.misc import logsumexp
     from scipy.special import logsumexp
     ```
 
-    c. Look for the file `gensim/corpora/dictionary.py`. Change the import line `from collections import Mapping, defaultdict` to the following:
+    c. Look for the file `gensim/corpora/dictionary.py`. Change the import line as:
     ```
+    # from collections import Mapping, defaultdict
     from collections import defaultdict
     from collections.abc import Mapping
     ```
 
-    d. Look for the file `gensim/models/word2vec.py`. Under the method ` _raw_word_count()`, change the return line to:
+    d. Look for the file `gensim/models/word2vec.py`. Under the method ` _raw_word_count()`, change the return line as:
     ```     
+    # return sum(len(sentence) for sentence in job)
     return sum(len(list(sentence)) for sentence in job)
     ```
 
