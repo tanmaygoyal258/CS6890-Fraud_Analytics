@@ -101,4 +101,4 @@ class Worker(threading.Thread):
         self."""
         for vertex in self.vertices:
             if vertex.active:
-                vertex.update()
+                    vertex.update()
